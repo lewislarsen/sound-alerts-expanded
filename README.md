@@ -3,6 +3,9 @@
 ## What is it?
 This plugin aims to expand upon the popular C-Engineer Announcer plugin by adding a variety of different sound triggers throughout the game.
 
+### How do I replace an audio file?
+Similarly to the C-Engineer plugin, however please visit the "sound-alerts-expanded" folder in .runelite and replace the appropriate.wav file. The default voice is a demonstration. 
+
 ## Got an idea?
 Make an issue and I'll consider adding it.
 

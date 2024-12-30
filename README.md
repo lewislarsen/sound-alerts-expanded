@@ -1,16 +1,55 @@
 # Sound Alerts Expanded
 
-## What is it?
-This plugin aims to expand upon the popular C-Engineer Announcer plugin by adding a variety of different sound triggers throughout the game.
+Sound Alerts Expanded is an installable plugin for Old School RuneScape (OSRS), available via the Plugin Hub on the [RuneLite](https://runelite.net) game client.
 
-### How do I replace an audio file?
-Similarly to the C-Engineer plugin, however please visit the "sound-alerts-expanded" folder in .runelite and replace the appropriate.wav file. The default voice is a demonstration. 
+---
 
-## Got an idea?
-Make an issue and I'll consider adding it.
+## What is Sound Alerts Expanded?
+This plugin introduces a broader range of sound triggers throughout the game.
 
-## Found an issue?
-Please open a new issue on the repository and I'll take a look. I'm a web developer by trade so this is new territory for me. :) 
+---
 
-## Inspiration
-Thank you to the C-Engineer Announcer plugin for giving me inspiration to work on this project. The plugin heavily uses portions of the code from the C-Engineer plugin, and it wouldn't have been possible without it.
+## Current Features
+### Triggers
+- Receive an audio alert when near a herb patch without the Farming Cape or Max Cape equipped (dependent on whether you have 99 Farming).
+
+---
+
+## Customization
+### Replacing Audio Files
+To replace an audio file:
+1. Navigate to the `sound-alerts-expanded` folder in your `.runelite` directory.
+2. Replace the desired `.wav` file with your own sound clip.
+
+The default voice is a demonstration generated via a voice generator. You are encouraged to use your own custom sounds.
+
+---
+
+## Got an Idea?
+If you have a suggestion please make an [issue](https://github.com/lewislarsen/sound-alerts-expanded/issues) in the repository, and I'll get back to you.
+
+---
+
+## Contributing
+We welcome contributions from the community! If you’d like to contribute:
+1. Submit a [Pull Request](https://github.com/lewislarsen/sound-alerts-expanded/pulls) (PR).
+2. PRs will be reviewed within a few days.
+
+Your contributions are appreciated, thank you!
+
+---
+
+## Reporting Issues
+If you encounter a bug or issue, please open a new [issue](https://github.com/lewislarsen/sound-alerts-expanded/issues) on the repository.
+
+---
+
+## License
+This project is licensed under the BSD 2-Clause Licence. For more details, refer to the `LICENSE` file in the repository.
+
+---
+
+## Acknowledgments
+A big thank you to the creators of the [C-Engineer Completed](https://github.com/m0bilebtw/c-engineer-completed) plugin for inspiring this project. This plugin relies heavily on code from the C-Engineer plugin, and it wouldn’t have been possible without their work.
+
+---

@@ -6,7 +6,7 @@ import javax.inject.Inject;
 import com.soundalertsexpanded.player.LoggedInState;
 import com.soundalertsexpanded.sound.SoundEngine;
 import com.soundalertsexpanded.sound.SoundFileManager;
-import com.soundalertsexpanded.triggers.AnnouncementTriggers;
+import com.soundalertsexpanded.triggers.MissingCapeAtHerbPatches;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.Client;
 import net.runelite.client.config.ConfigManager;
@@ -50,14 +50,18 @@ public class SoundAlertsExpandedPlugin extends Plugin
 	private SoundEngine soundEngine;
 
 	@Inject
-	private AnnouncementTriggers announcementTriggers;
+	private MissingCapeAtHerbPatches missingCapeAtHerbPatches;
 
 	@Inject
 	private LoggedInState loggedInState;
 
 	@Override
 	protected void startUp() throws Exception {
-		eventBus.register(announcementTriggers);
+
+		// register list of sound triggers
+		eventBus.register(missingCapeAtHerbPatches);
+		// end list of triggers
+
 		eventBus.register(loggedInState);
 		loggedInState.setForCurrentGameState(client.getGameState());
 
@@ -66,7 +70,11 @@ public class SoundAlertsExpandedPlugin extends Plugin
 
 	@Override
 	protected void shutDown() throws Exception {
-		eventBus.unregister(announcementTriggers);
+
+		// unregister list of sound triggers
+		eventBus.unregister(missingCapeAtHerbPatches);
+		// end list of triggers
+
 		eventBus.unregister(loggedInState);
 		soundEngine.close();
 	}

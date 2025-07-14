@@ -39,6 +39,17 @@ public interface SoundAlertsExpandedConfig extends Config {
 		return true;
 	}
 
+	@ConfigItem(
+			keyName = "announceChambersRaidCompletion",
+			name = "Notify Chambers of Xeric Completion",
+			description = "Get an alert when a Chambers of Xeric raid is completed.",
+			section = SECTION_SOUND_TRIGGERS,
+			position = 3
+	)
+	default boolean announceChambersRaidCompletion() {
+		return true;
+	}
+
 	@Range(
 			min = 0,
 			max = 100
@@ -48,7 +59,7 @@ public interface SoundAlertsExpandedConfig extends Config {
 			name = "Sound Volume",
 			description = "Adjust the volume of the sound alerts.",
 			section = SECTION_SOUND_TRIGGERS,
-			position = 3
+			position = 4
 	)
 	default int soundVolume() {
 		return 100;

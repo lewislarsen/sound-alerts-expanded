@@ -8,7 +8,7 @@ This plugin introduces a broader range of sound triggers throughout the game.
 ## Current Features
 ### Triggers
 - Receive an audio alert when near a herb patch without the Farming Cape or Max Cape equipped (dependent on whether you have 99 Farming).
-
+- Receive an audio alert when you have completed a Chambers of Xeric Raid.
 
 ## Customization
 ### Replacing Audio Files

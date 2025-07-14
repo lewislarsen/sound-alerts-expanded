@@ -4,7 +4,6 @@ import com.google.inject.Provides;
 import javax.inject.Inject;
 
 import com.soundalertsexpanded.player.LoggedInState;
-import com.soundalertsexpanded.sound.SoundEngine;
 import com.soundalertsexpanded.sound.SoundFileManager;
 import com.soundalertsexpanded.triggers.ChambersOfXericCompletion;
 import com.soundalertsexpanded.triggers.MissingCapeAtHerbPatches;
@@ -48,9 +47,6 @@ public class SoundAlertsExpandedPlugin extends Plugin
 	private EventBus eventBus;
 
 	@Inject
-	private SoundEngine soundEngine;
-
-	@Inject
 	private MissingCapeAtHerbPatches missingCapeAtHerbPatches;
 
 	@Inject
@@ -82,7 +78,6 @@ public class SoundAlertsExpandedPlugin extends Plugin
 		// end list of triggers
 
 		eventBus.unregister(loggedInState);
-		soundEngine.close();
 	}
 
 	@Provides

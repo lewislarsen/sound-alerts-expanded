@@ -34,8 +34,8 @@ public class SoundFileManager {
 
     private static final HttpUrl RAW_GITHUB = HttpUrl.parse("https://raw.githubusercontent.com/lewislarsen/sound-alerts-expanded/sounds");
 
-    public static InputStream getSoundStream(Sound sound) throws FileNotFoundException {
-        return new FileInputStream(DOWNLOAD_DIR.resolve(sound.getResourceName()).toFile());
+    public static File getSoundFile(Sound sound) {
+        return DOWNLOAD_DIR.resolve(sound.getResourceName()).toFile();
     }
 
     public static void prepareSoundFiles(OkHttpClient okHttpClient, boolean downloadStreamerTrolls) {

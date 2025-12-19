@@ -52,7 +52,7 @@ public interface SoundAlertsExpandedConfig extends Config {
 
 	@Range(
 			min = 0,
-			max = 100
+			max = 200
 	)
 	@ConfigItem(
 			keyName = "soundVolume",

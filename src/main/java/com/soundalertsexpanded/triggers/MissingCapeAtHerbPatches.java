@@ -11,9 +11,9 @@ import com.soundalertsexpanded.sound.Sound;
 import com.soundalertsexpanded.sound.SoundEngine;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.Client;
-import net.runelite.api.InventoryID;
+import net.runelite.api.gameval.InventoryID;
 import net.runelite.api.ItemContainer;
-import net.runelite.api.ItemID;
+import net.runelite.api.gameval.ItemID;
 import net.runelite.api.Player;
 import net.runelite.api.Skill;
 import net.runelite.api.coords.WorldPoint;
@@ -107,11 +107,12 @@ public class MissingCapeAtHerbPatches {
     }
 
     private boolean isCapeMissing() {
-        ItemContainer equipment = client.getItemContainer(InventoryID.EQUIPMENT);
+
+        ItemContainer equipment = client.getItemContainer(InventoryID.WORN);
 
         return equipment != null &&
-                !equipment.contains(ItemID.FARMING_CAPE) &&
-                !equipment.contains(ItemID.FARMING_CAPET) &&
-                !equipment.contains(ItemID.MAX_CAPE_13342); // The specific red max cape when it's equipped
+                !equipment.contains(ItemID.SKILLCAPE_FARMING) &&
+                !equipment.contains(ItemID.SKILLCAPE_FARMING_TRIMMED) &&
+                !equipment.contains(ItemID.SKILLCAPE_MAX_WORN); // The specific red max cape when it's equipped
     }
 }
